@@ -19,13 +19,15 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf import settings
-from geeks.views import index, contact, blog_details
+from apps.geeks.views import index, contact,blog_detail
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('contact/', contact, name='contact'),
-    path('blog_details/', blog_details, name='blog_details')
+    path('blog/<int:id>/', blog_detail, name='blog_detail'),
+
+    # path('blog_details/', blog_details, name='blog_details')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

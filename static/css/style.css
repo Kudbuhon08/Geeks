@@ -77,9 +77,15 @@ body {
 }
 
 img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 271px;
+  height: 201px;
   object-fit: cover !important;
+}
+
+img {
+    width: 271px;
+    height: 201px;
+    object-fit: cover !important;
 }
 
 input,
